@@ -1,0 +1,117 @@
+:root{
+    --soft-red: #e43e3e;
+}
+*{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+.logo::first-letter{
+    color: var(--soft-red);
+}
+.my-nav{
+    position: absolute;
+    top: 0px;
+    z-index: 99;
+    background-color: transparent;
+    width: 100%;
+}
+
+.cover{
+    background: url(../image/img-2.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(35%);
+    z-index: 1;
+}
+.text-cover{
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-soft-red{
+    color: var(--soft-red);
+}
+.sub-title{
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--soft-red);
+    letter-spacing: 2px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.h-100vh{
+    min-height: 100vh;
+}
+.line{
+    background-color: var(--soft-red);
+    height: 3px;
+    width: 120px;
+    border-radius: 10px;
+}
+.img-about{
+    width: 480px;
+    height: 400px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.break-work{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 550px) {
+    .img-about{
+        width: 300px;
+        height: 220px;
+        margin-bottom: 20px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact input, .contact textarea{
+        width: 100% !important;
+    }
+    .about{
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px) {
+    .sub-title{ font-size: 55px; }
+}
+@media (max-width: 340px) {
+    .img-about{
+        width: 100%;
+        height: 150px;
+    }
+    .sub-title{ font-size: 40px; }
+    .text-cover .fw-bold{
+        font-size: 22px;
+    }
+}
